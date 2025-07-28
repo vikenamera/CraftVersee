@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CraftVerse</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="indexStyle.css">
+</head>
+
+<body>
+ <div id="custom-alert" class="custom-alert hidden"></div>
+   <header>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container d-flex justify-content-center">
+        <a class="navbar-brand" href="index.html">
+          <img src="logoo2.png" alt="CraftVerseLogo" class="img-fluid" width="350" height="150">
+        </a>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav justify-content-center w-100">
+            <li class="nav-item"><a class="nav-link" href="index.html">KREU</a></li>
+            <li class="nav-item"><a class="nav-link" href="aboutUs.html">RRETH NESH</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">CraftStudio</a>
+              <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="partizanale.html">Punime Artizanale</a></li>
+                            <li><a class="dropdown-item" href="digjitale.html">Ilustrime Digjitale</a></li>
+                            <li><a class="dropdown-item" href="qepjendje.html">Qepje & Endje</a></li>
+                            <li><a class="dropdown-item" href="ricikluara.html">Punime të Ricikluara</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="market.html">CraftMarket</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">CraftCommunity</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Kontakt</a></li>
+            <li class="nav-item"><a class="nav-link" href="signup.html"><button class="btn-filled">SignUP</button></a></li>
+          </ul>
+              </div>
+                <a class="nav-link" href="cart.html">
+            <i class="bi bi-bag-heart-fill"></i> <span id="cart-count">0</span>
+        </a>
+      </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+<section class="hero" id="home">
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="vid1.mp4" type="video/mp4">
+  </video>
+  <div class="hero-content">
+    <h1>Mirë se erdhe në CraftVerse</h1>
+    <p class="subtitle">ku <em>kreativiteti</em> takohet me <em>lehtësinë</em></p>
+    <p class="description">
+      Eksploro punimet artizanale, punëtoritë e kuruara, kurset digjitale,<br>
+      mjetet dhe materialet me cilësi të lartë, dhe shumë më tepër.
+    </p>
+    <div class="hero-buttons">
+      <a href="signup.html" class="btn-primary">Nis një Abonim</a>
+      <a href="market.html" class="btn-secondary">Bli në Market</a>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="trending-section">
+  <div class="trending-content">
+    <div class="trending-text">
+      <h2>What's<br>Trending?</h2>
+      <p>
+        Nga punime artizanale me ngjyra të ngrohta deri te dizajnet digjitale që frymëzojnë, 
+        trendet tona reflektojnë shpirtin krijues të komunitetit. 
+        Shfletoni produktet më të pëlqyera, projektet që po marrin vëmendje dhe 
+        sfidat më kreative në CraftStudio, CraftMarket dhe CraftCommunity.
+      </p>
+    </div>
+    <div class="trending-image">
+      <img src="trending.jpg" alt="Trending item" />
+    </div>
+  </div>
+</section>
+<br><br>
+
+<section class="explore">
+  <h2 class="section-title">Explore</h2>
+  <div class="destination-grid">
+    <div class="destination-card">
+      <img src="tutorial.jpg" alt="CraftStudio">
+      <div class="overlay">
+        <a href="#">CraftStudio</a>
+      </div>
+    </div>
+    <div class="destination-card">
+      <img src="market.jpg" alt="CraftMarket">
+      <div class="overlay">
+        <a href="market.html">CraftMarket</a>
+      </div>
+    </div>
+    <div class="destination-card">
+      <img src="blog1.jpg" alt="CraftCommunity">
+      <div class="overlay">
+        <a href="blog.html">CraftCommunity</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<br><br>
+<section class="products-section">
+  <h2>Our Products</h2>
+<br>
+  <div class="scrolling-gallery">
+    <div class="image-track">
+      <img src="candles.jpg" alt="Product" />
+      <img src="keychain.jpg" alt="Product" />
+      <img src="pjata.jpg" alt="Product" />
+      <img src="qendisje.jpg" alt="Product" />
+      <img src="sedi.jpg" alt="Product" />
+      <img src="skulptur.jpg" alt="Product" />
+      <img src="cant.jpg" alt="Product" />
+      <img src="qeramik.jpg" alt="Product" />
+
+      <img src="candles.jpg" alt="Product" />
+      <img src="keychain.jpg" alt="Product" />
+      <img src="pjata.jpg" alt="Product" />
+      <img src="qendisje.jpg" alt="Product" />
+      <img src="sedi.jpg" alt="Product" />
+      <img src="skulptur.jpg" alt="Product" />
+      <img src="cant.jpg" alt="Product" />
+      <img src="qeramik.jpg" alt="Product" />
+    </div>
+  </div>
+</section>
+
+<section class="section reverse">
+  <div class="text-content">
+    <h1>Designer’s<br>Dream</h1>
+    <p class="dream">
+      CraftVerse është vendi ku arti tradicional takohet me teknologjinë moderne. 
+      Një platformë e ndërtuar për të mbështetur krijuesit në çdo hap – nga ideja e parë, 
+      te mësimi dhe shitja. Këtu, çdo artist ka hapësirën për të shprehur talentin, 
+      për të ndarë pasionin dhe për ta kthyer kreativitetin në mënyrë jetese.
+    </p>
+  </div>
+
+  <div class="circle-text-wrapper">
+    <svg viewBox="0 0 400 400" width="400" height="400">
+      <defs>
+        <path id="circlePath" d="M200,200 m-160,0 a160,160 0 1,1 320,0 a160,160 0 1,1 -320,0" />
+      </defs>
+      <g class="rotating-text">
+        <text font-size="16" fill="#BD4C65" font-family="sans-serif">
+          <textPath href="#circlePath" startOffset="0%">
+            Designs • High Quality • Custom Work • Domestic Production • Trade Discount • 
+          </textPath>
+        </text>
+      </g>
+    </svg>
+    <img src="dream.jpg" alt="Designer Room" class="center-image" />
+  </div>
+</section>
+
+<section class="testimonial-section">
+  <h2>Testimonials</h2>
+<br>
+  <div class="testimonial-container">
+    <button class="arrow left" onclick="prevTestimonial()">&#8592;</button>
+
+    <div class="testimonial-content" id="testimonial-content">
+    </div>
+
+    <button class="arrow right" onclick="nextTestimonial()">&#8594;</button>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <!-- Logo + Slogan -->
+    <div class="footer-about">
+      <img src="slogan1.png" alt="CraftVerse Logo" width="300px">
+    </div>
+
+    <!-- Lidhje të shpejta -->
+    <div class="footer-grid">
+      <div>
+        <h4>CraftVerse</h4>
+        <ul>
+          <li><a href="index.html">Kreu</a></li>
+          <li><a href="craftstudio.htmk">CarftStudio</a></li>
+          <li><a href="market.html">CraftMarket</a></li>
+          <li><a href="blog.html">CraftCommunity</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Mbështetje</h4>
+        <ul>
+          <li><a href="contact.html">Kontakt</a></li>
+          <li><a href="faq1.html">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Kompania</h4>
+        <ul>
+          <li><a href="#">Rreth Nesh</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Na gjej lehtësisht</h4>
+        <ul>
+          <li><i class="fas fa-phone"></i> +355 60 000 0000</li>
+          <li><i class="fas fa-envelope"></i> info@craftverse.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Tiranë, Shqipëri</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pjesa fundore e faqes -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 CraftVerse</p>
+    <div>
+      <button type="button" class="terms-btn btn btn-link" data-bs-toggle="modal" data-bs-target="#termsModal">Termat</button>
+      <span>|</span>
+      <button type="button" class="terms-btn btn btn-link" data-bs-toggle="modal" data-bs-target="#privacyModal">Privatësia</button>
+    </div>
+  </div>
+
+<!-- Modal për Termat dhe Kushtet -->
+<div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="termsTitle">Termat dhe Kushtet e CraftVerse</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Mbyll"></button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Mirësevini në <strong>CraftVerse</strong>! Duke përdorur faqen tonë, ju pranoni të respektoni termat dhe kushtet e mëposhtme.
+        </p>
+
+        <h5>1. Përgjithësime</h5>
+        <p>
+          CraftVerse është një platformë online me tre seksione kryesore:
+          <strong>Market</strong>, <strong>Blog</strong> dhe <strong>Tutorial</strong>.
+        </p>
+
+        <h5>2. Përdorimi i faqes</h5>
+        <p>
+          Ju pranoni të mos përdorni CraftVerse për qëllime të paligjshme ose për shkelje të të drejtave të autorit.
+        </p>
+
+        <h5>3. Market Page</h5>
+        <p>
+          Produktet janë artizanale. Çmimet dhe disponueshmëria mund të ndryshojnë pa paralajmërim.
+        </p>
+
+        <h5>4. Blog & Tutorial</h5>
+        <p>
+          Artikujt dhe videot janë për qëllime informuese dhe edukative. Ndiqni udhëzimet e sigurisë kur kryeni DIY projekte.
+        </p>
+
+        <h5>5. Privatësia</h5>
+        <p>
+          Të dhënat tuaja personale ruhen dhe përdoren vetëm për qëllime të komunikimit dhe porosive.
+        </p>
+
+        <h5>6. Ndryshime</h5>
+        <p>
+          CraftVerse mund të ndryshojë këto terma në çdo kohë dhe do t’i publikojë në këtë faqe.
+        </p>
+
+        <p><strong>Duke përdorur CraftVerse, ju pranoni këto terma.</strong></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">E kuptova</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal për Privatësinë -->
+<div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="privacyTitle">Politika e Privatësisë</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Mbyll"></button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Privatësia juaj është me rëndësi për ne. Kjo politikë përshkruan se si mbledhim, përdorim dhe mbrojmë të dhënat tuaja.
+        </p>
+
+        <h5>1. Të dhënat që mbledhim</h5>
+        <p>
+          Mbledhim të dhëna kur regjistroheni, bëni porosi ose na kontaktoni. Këto përfshijnë emrin, emailin, dhe të dhëna të kontaktit.
+        </p>
+
+        <h5>2. Si i përdorim të dhënat</h5>
+        <p>
+          Të dhënat përdoren për përpunim porosish, ofrim shërbimesh dhe komunikim me ju.
+        </p>
+
+        <h5>3. Ruajtja dhe siguria</h5>
+        <p>
+          Të dhënat ruhen në mënyrë të sigurt dhe nuk ndahen me palë të treta pa pëlqimin tuaj.
+        </p>
+
+        <h5>4. Cookies</h5>
+        <p>
+          Ne përdorim cookies për të përmirësuar përvojën tuaj dhe për analizim të faqes.
+        </p>
+
+        <p><strong>Duke përdorur faqen tonë, ju pranoni politikën tonë të privatësisë.</strong></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">E kuptova</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+<script>
+  const testimonials = [
+    {
+      text: "CraftVerse më dha mundësinë të shes punimet e mia të dorës dhe të lidhem me njerëz që i vlerësojnë artizanatin. Komuniteti është i ngrohtë dhe shumë mbështetës!",
+      stars: 4,
+      name: "Arta B.",
+      designation: "Artizane"
+    },
+    {
+      text: "E adhuroj seksionin e produkteve digjitale! Si një dizajner grafik, më në fund gjeta një platformë që e vlerëson punën time dhe ma lehtëson shitjen",
+      stars: 5,
+      name: "Redi K.",
+      designation: "Dizajner Freelancer"
+    },
+    {
+      text: "Për çdo dhuratë që dua të bëj, shkoj te CraftVerse. Paketimet janë të kuruara me shumë kujdes dhe çdo produkt ka shpirt.",
+      stars: 3,
+      name: "Elira M.",
+      designation: "Kliente e rregullt"
+    }
+  ];
+
+  let current = 0;
+
+  function renderTestimonial() {
+    const t = testimonials[current];
+    const stars = '★'.repeat(t.stars) + '☆'.repeat(5 - t.stars);
+
+    document.getElementById('testimonial-content').innerHTML = `
+      <div class="stars">${stars}</div>
+      <p class="testimonial-text">${t.text}</p>
+      <p class="author-name">${t.name}</p>
+      <p class="designation">${t.designation}</p>
+    `;
+  }
+
+  function prevTestimonial() {
+    current = (current - 1 + testimonials.length) % testimonials.length;
+    renderTestimonial();
+  }
+
+  function nextTestimonial() {
+    current = (current + 1) % testimonials.length;
+    renderTestimonial();
+  }
+
+  renderTestimonial();
+</script>
+
+
+
+</body>
+
+</html> 

@@ -1,0 +1,129 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #F7F4F0;
+  padding: 2rem;
+  color: #1A1C29;
+}
+
+h1 {
+  font-family: 'Lora', serif;
+  color: #BD4C65;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+form {
+  background-color: #fff;
+  border: 3px solid #DEF2ED;
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 700px;
+  margin: auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+}
+
+
+textarea {
+  height: 180px;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  background-color: #007A82;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+button:hover {
+  background-color: #BD4C65;
+}
+
+#successMessage {
+  display: none;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #DEF2ED;
+  border-left: 4px solid #70C7A8;
+  border-radius: 6px;
+  font-style: italic;
+}
+
+.upload-container {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.upload-container h1 {
+  font-family: 'Lora', serif;
+  color: #BD4C65;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.upload-container p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #555;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  form {
+    padding: 1.5rem;
+  }
+
+  .upload-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .upload-container p {
+    font-size: 0.95rem;
+  }
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #007A82;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 122, 130, 0.1);
+}
+
+form h2 {
+  font-family: 'Lora', serif;
+  color: #1A1C29;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
