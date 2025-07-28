@@ -1,0 +1,153 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background: url('img6.jpg') no-repeat center center/cover;
+}
+
+.login-wrapper {
+  /* min-height: 100vh; */
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 85px 50px 85px 50px; /* equal top and bottom padding */
+  box-sizing: border-box;
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px 40px; /* increased padding for better spacing */
+  color: #1c1c1c;
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* added space between all direct children */
+}
+
+.login-box h2 {
+  font-family: 'Lora', serif;
+  font-weight: 700; /* bold */
+  color: #912f45;
+  margin: 0; /* remove default margin for better control */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px; 
+  margin: 0;}
+
+.input-field {
+  color: #1c1c1c;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+}
+
+.input-field::placeholder {
+  color: #888;
+}
+
+.login-btn {
+  background-color: #912f45;
+  border-radius: 50px;
+  padding: 14px; /* slightly bigger for better click area */
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #7a2840;
+}
+
+.form-check {
+  text-align: left;
+  margin-top: 0;
+}
+
+.form-check-label {
+  color: #1c1c1c;
+  font-size: 0.95rem;
+  font-family: 'Roboto', sans-serif;
+  user-select: none;
+}
+
+.small-links {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.small-links a {
+  color: #1c1c1c;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.small-links a:hover {
+  text-decoration: underline;
+}
+
+.small-links a::after{
+    color:#007A82;
+}
+
+#toastMessage {
+  position: fixed;
+  bottom: 30px;           /* 30px from the bottom of the viewport */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 9999;
+  max-width: 90vw;
+  text-align: center;
+  word-wrap: break-word;
+  display: none;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#toastMessage.show {
+  opacity: 1;
+  pointer-events: auto;
+  display: block;
+}
+
+/* Toast Colors */
+#toastMessage.success {
+  background-color: #007A82; /* teal/dark cyan */
+}
+
+#toastMessage.info {
+  background-color: #BD4C65; /* pinkish */
+}
+
+#toastMessage.warning {
+  background-color: #ffc107; /* yellow */
+  color: #1c1c1c;
+}
+
+#toastMessage.error {
+  background-color: #dc3545; /* red */
+}

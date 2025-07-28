@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ - CraftVerse</title>
+  <link rel="stylesheet" href="indexStyle.css">
+  <style>
+ :root {
+  --primary: #bd4c65;     /* Main pink */
+  --secondary: #9e4054;   /* Darker rose */
+  --accent: #c76c7c;      /* Soft dusty pink */
+  --blue: #007A82;        /* Calming modern blue */
+  --text: #555;
+  --bg-light: #F7F4F0;
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-light);
+  font-family: 'Roboto', sans-serif;
+}
+
+.faq-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem;
+  background-color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.5)),
+              url('craft.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.faq-hero-text {
+  max-width: 60%;
+}
+
+.faq-hero-text h1 {
+  font-family: 'Lora', serif;
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.faq-hero-text p {
+  font-size: 1rem;
+  color: white;
+  line-height: 1.6;
+}
+
+.faq-hero-img {
+  max-width: 30%;
+}
+
+.faq-hero-img img {
+  width: 100%;
+  height: auto;
+}
+
+.faq-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem 3rem;
+  gap: 2rem;
+}
+
+.faq-categories {
+  flex: 1;
+  min-width: 200px;
+}
+
+.faq-categories ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.faq-categories li {
+  margin-bottom: 1rem;
+}
+
+.faq-categories a {
+  color: var(--blue); /* Blue navigation links */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.faq-content-area {
+  flex: 3;
+  min-width: 300px;
+}
+
+.faq-section {
+  margin-bottom: 2rem;
+}
+
+.faq-section h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--blue); /* Blue section headings */
+  border-left: 4px solid var(--blue);
+  padding-left: 1rem;
+}
+
+.faq-item {
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border-left: 6px solid var(--accent);
+  transition: all 0.3s ease;
+}
+
+.faq-title {
+  padding: 1.2rem 1.5rem;
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: var(--accent);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background-color: var(--white);
+}
+
+.faq-title:hover {
+  background-color: #e9f1f9; /* Light blue on hover */
+}
+
+.faq-content {
+  background-color: #fff;
+  padding: 0 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  transition: max-height 0.5s ease, padding 0.4s ease;
+}
+
+.faq-item.active .faq-content {
+  max-height: 500px;
+  padding: 1rem 1.5rem 1.5rem;
+}
+
+.faq-item.active .faq-title span {
+  transform: rotate(45deg);
+}
+
+.faq-title span {
+  transition: transform 0.3s ease;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--blue);
+}
+
+
+/* .cta {
+  margin-top: 60px;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.cta h2 {
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.cta a {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent);
+  color: white;
+  font-weight: 500;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta a:hover {
+  background: transparent;
+  border: 2.8px solid var(--accent);
+  font-weight: bold;
+  color: var(--primary);
+} */
+
+.cta {
+  margin: 4rem auto;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 1.3rem;
+  color: var(--blue);
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.cta a {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  background-color: var(--accent);
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.cta a:hover {
+  background-color: transparent;
+  border: 2px solid var(--accent);
+  color: var(--primary);
+  font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+  .faq-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .faq-hero-text {
+    max-width: 100%;
+  }
+  .faq-hero-img {
+    display: none;
+  }
+  .faq-wrapper {
+    flex-direction: column;
+  }
+}
+
+  </style>
+</head>
+<body>
+<header>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container d-flex justify-content-center">
+        <a class="navbar-brand" href="index.html">
+          <img src="logoo2.png" alt="CraftVerseLogo" class="img-fluid" width="350" height="150">
+        </a>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav justify-content-center w-100">
+            <li class="nav-item"><a class="nav-link" href="index.html">KREU</a></li>
+            <li class="nav-item"><a class="nav-link" href="aboutUs.html">RRETH NESH</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">CraftStudio</a>
+              <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="partizanale.html">Punime Artizanale</a></li>
+                            <li><a class="dropdown-item" href="digjitale.html">Ilustrime Digjitale</a></li>
+                            <li><a class="dropdown-item" href="qepjendje.html">Qepje & Endje</a></li>
+                            <li><a class="dropdown-item" href="ricikluara.html">Punime të Ricikluara</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="market.html">CraftMarket</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">CraftCommunity</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Kontakt</a></li>
+            <li class="nav-item"><a class="nav-link" href="signup.html"><button class="btn-filled">SignUP</button></a></li>
+          </ul>
+              </div>
+                <a class="nav-link" href="cart.html">
+            <i class="bi bi-bag-heart-fill"></i> <span id="cart-count">0</span>
+        </a>
+      </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+<div class="faq-hero">
+  <div class="faq-hero-text">
+    <h1>FAQ</h1>
+    <p>Ke pyetje? Këtu do të gjesh përgjigjet për çështjet më të rëndësishme që shqetësojnë krijuesit tanë, si dhe udhëzime hap pas hapi dhe mbështetje teknike.</p>
+  </div>
+</div>
+
+<div class="faq-wrapper">
+  <div class="faq-categories">
+    <ul>
+      <li><a href="#about">Rreth nesh</a></li>
+      <li><a href="#market">CraftMarket</a></li>
+      <li><a href="#studio">CraftStudio</a></li>
+      <li><a href="#community">CraftCommunity</a></li>
+    </ul>
+  </div>
+
+  <div class="faq-content-area">
+
+    <!-- Rreth Nesh -->
+    <div class="faq-section" id="about">
+      <h3>Rreth Nesh</h3>
+
+      <div class="faq-item">
+        <div class="faq-title">Çfarë është CraftVerse? <span>+</span></div>
+        <div class="faq-content">
+          CraftVerse është një platformë gjithëpërfshirëse për krijuesit që bashkon tutoriale, tregti artizanale dhe një komunitet kreativ. Këtu mund të mësosh, krijosh, dhe ndash punimet e tua me botën.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-title">Kush mund të regjistrohet në CraftVerse? <span>+</span></div>
+        <div class="faq-content">
+          Çdokush që ka pasion për krijimtari – nga fillestarët deri te artizanët me përvojë. Pavarësisht nëse punon me dorë apo në kompjuter, ke një vend në platformë.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-title">A ka tarifë për t’u bërë pjesë e CraftVerse? <span>+</span></div>
+        <div class="faq-content">
+          Regjistrimi është falas për përdoruesit dhe krijuesit.
+        </div>
+      </div>
+    </div>
+
+    <!-- CraftMarket -->
+    <div class="faq-section" id="market">
+      <h3>CraftMarket</h3>
+
+      <div class="faq-item">
+        <div class="faq-title">A mund të shes produkte në CraftMarket? <span>+</span></div>
+        <div class="faq-content">
+          Po! Pasi të hapësh një llogari krijuesi, mund të krijosh vitrinën tënde në CraftMarket dhe të publikosh produkte fizike ose digjitale për shitje. Ne mbështesim pagesat dhe dërgesat.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-title">Çfarë lloj produktesh lejohen për shitje? <span>+</span></div>
+        <div class="faq-content">
+          CraftVerse pranon vetëm produkte autentike dhe të punuara me kujdes: artizanale, digjitale, të personalizuara, punime me dorë, materiale të ricikluara, ilustrime, qepje dhe më shumë.
+        </div>
+      </div>
+    </div>
+
+    <!-- CraftStudio -->
+    <div class="faq-section" id="studio">
+      <h3>CraftStudio</h3>
+
+      <div class="faq-item">
+        <div class="faq-title">Çfarë mund të bëj në CraftStudio? <span>+</span></div>
+        <div class="faq-content">
+          Pas regjistrimit, mund të shkosh te CraftStudio dhe të shohësh tutoriale të ndryshme me përshkrim, video dhe kategori.
+        </div>
+      </div>
+    </div>
+
+    <!-- CraftCommunity -->
+    <div class="faq-section" id="community">
+      <h3>CraftCommunity</h3>
+
+      <div class="faq-item">
+        <div class="faq-title">Si funksionon komuniteti CraftCommunity? <span>+</span></div>
+        <div class="faq-content">
+          CraftCommunity është një hapësirë për bashkëbisedim, sfida kreative, ndarje idesh dhe mbështetje mes krijuesve. Mund të postosh, komentosh dhe marrësh pjesë në aktivitete krijuese.
+        </div>
+      </div>
+    </div> <!-- End of .faq-content-area -->
+</div>
+</div>
+<div class="cta">
+  <h2>Ende ke pyetje?</h2>
+  <a href="contact.html">Na Kontakto Tani</a>
+</div>
+ <footer>
+  <div class="footer-top">
+    <!-- Logo + Slogan -->
+    <div class="footer-about">
+      <img src="slogan1.png" alt="CraftVerse Logo" width="300px">
+    </div>
+
+    <!-- Lidhje të shpejta -->
+    <div class="footer-grid">
+      <div>
+        <h4>CraftVerse</h4>
+        <ul>
+          <li><a href="index.html">Kreu</a></li>
+          <li><a href="craftstudio.htmk">CarftStudio</a></li>
+          <li><a href="market.html">CraftMarket</a></li>
+          <li><a href="blog.html">CraftCommunity</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Mbështetje</h4>
+        <ul>
+          <li><a href="contact.html">Kontakt</a></li>
+          <li><a href="faq1.html">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Kompania</h4>
+        <ul>
+          <li><a href="#">Rreth Nesh</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Na gjej lehtësisht</h4>
+        <ul>
+          <li><i class="fas fa-phone"></i> +355 60 000 0000</li>
+          <li><i class="fas fa-envelope"></i> info@craftverse.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Tiranë, Shqipëri</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pjesa fundore e faqes -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 CraftVerse</p>
+    <div>
+      <button type="button" class="terms-btn btn btn-link" data-bs-toggle="modal" data-bs-target="#termsModal">Termat</button>
+      <span>|</span>
+      <button type="button" class="terms-btn btn btn-link" data-bs-toggle="modal" data-bs-target="#privacyModal">Privatësia</button>
+    </div>
+  </div>
+
+<!-- Modal për Termat dhe Kushtet -->
+<div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="termsTitle">Termat dhe Kushtet e CraftVerse</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Mbyll"></button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Mirësevini në <strong>CraftVerse</strong>! Duke përdorur faqen tonë, ju pranoni të respektoni termat dhe kushtet e mëposhtme.
+        </p>
+
+        <h5>1. Përgjithësime</h5>
+        <p>
+          CraftVerse është një platformë online me tre seksione kryesore:
+          <strong>Market</strong>, <strong>Blog</strong> dhe <strong>Tutorial</strong>.
+        </p>
+
+        <h5>2. Përdorimi i faqes</h5>
+        <p>
+          Ju pranoni të mos përdorni CraftVerse për qëllime të paligjshme ose për shkelje të të drejtave të autorit.
+        </p>
+
+        <h5>3. Market Page</h5>
+        <p>
+          Produktet janë artizanale. Çmimet dhe disponueshmëria mund të ndryshojnë pa paralajmërim.
+        </p>
+
+        <h5>4. Blog & Tutorial</h5>
+        <p>
+          Artikujt dhe videot janë për qëllime informuese dhe edukative. Ndiqni udhëzimet e sigurisë kur kryeni DIY projekte.
+        </p>
+
+        <h5>5. Privatësia</h5>
+        <p>
+          Të dhënat tuaja personale ruhen dhe përdoren vetëm për qëllime të komunikimit dhe porosive.
+        </p>
+
+        <h5>6. Ndryshime</h5>
+        <p>
+          CraftVerse mund të ndryshojë këto terma në çdo kohë dhe do t’i publikojë në këtë faqe.
+        </p>
+
+        <p><strong>Duke përdorur CraftVerse, ju pranoni këto terma.</strong></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">E kuptova</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal për Privatësinë -->
+<div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="privacyTitle">Politika e Privatësisë</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Mbyll"></button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Privatësia juaj është me rëndësi për ne. Kjo politikë përshkruan se si mbledhim, përdorim dhe mbrojmë të dhënat tuaja.
+        </p>
+
+        <h5>1. Të dhënat që mbledhim</h5>
+        <p>
+          Mbledhim të dhëna kur regjistroheni, bëni porosi ose na kontaktoni. Këto përfshijnë emrin, emailin, dhe të dhëna të kontaktit.
+        </p>
+
+        <h5>2. Si i përdorim të dhënat</h5>
+        <p>
+          Të dhënat përdoren për përpunim porosish, ofrim shërbimesh dhe komunikim me ju.
+        </p>
+
+        <h5>3. Ruajtja dhe siguria</h5>
+        <p>
+          Të dhënat ruhen në mënyrë të sigurt dhe nuk ndahen me palë të treta pa pëlqimin tuaj.
+        </p>
+
+        <h5>4. Cookies</h5>
+        <p>
+          Ne përdorim cookies për të përmirësuar përvojën tuaj dhe për analizim të faqes.
+        </p>
+
+        <p><strong>Duke përdorur faqen tonë, ju pranoni politikën tonë të privatësisë.</strong></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">E kuptova</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</footer>
+<script>
+  const items = document.querySelectorAll(".faq-item");
+  items.forEach(item => {
+    item.querySelector(".faq-title").addEventListener("click", () => {
+      item.classList.toggle("active");
+    });
+  });
+</script>
+
+</body>
+</html>
