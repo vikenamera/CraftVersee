@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CraftVerse</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="indexStyle.css">
+  <link rel="stylesheet" href="market.css">
+</head>
+<body>
+  <div id="custom-alert" class="custom-alert hidden"></div>
+   <header>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container d-flex justify-content-center">
+        <a class="navbar-brand" href="index.html">
+          <img src="logoo2.png" alt="CraftVerseLogo" class="img-fluid" width="350" height="150">
+        </a>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav justify-content-center w-100">
+            <li class="nav-item"><a class="nav-link" href="index.html">KREU</a></li>
+            <li class="nav-item"><a class="nav-link" href="aboutUs.html">RRETH NESH</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">CraftStudio</a>
+              <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="partizanale.html">Punime Artizanale</a></li>
+                            <li><a class="dropdown-item" href="digjitale.html">Ilustrime Digjitale</a></li>
+                            <li><a class="dropdown-item" href="qepjendje.html">Qepje & Endje</a></li>
+                            <li><a class="dropdown-item" href="ricikluara.html">Punime të Ricikluara</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="market.html">CraftMarket</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">CraftCommunity</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Kontakt</a></li>
+            <li class="nav-item"><a class="nav-link" href="signup.html"><button class="btn-filled">SignUP</button></a></li>
+          </ul>
+              </div>
+          <a class="nav-link" href="cart.html">
+            <i class="bi bi-bag-heart-fill"></i> <span id="cart-count">0</span>
+        </a>
+      </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="shop-container">
+    <!--Filter Sidebar -->
+<section>
+     <button class="filter-toggle" id="filterToggleBtn"> Filters</button>
+  <div class="shop-filters" id="filterPanel">
+  <div class="filter-section">
+    <h2>Filter</h2>
+
+    <!-- Category Filters -->
+    <div class="filter-group">
+      <label><input type="checkbox" class="filter" data-filter="category" value="handmade"> Handmade</label>
+      <label><input type="checkbox" class="filter" data-filter="category" value="mjete"> Mjete & Aksesore</label>
+      <label><input type="checkbox" class="filter" data-filter="category" value="giftbox"> Pako Dhuratë</label>
+    </div>
+
+    <!-- Price Range Filter -->
+    <div class="filter-group">
+      <h3>Çmimi</h3>
+      <div class="price-range-container">
+        <span id="price-display">0 - Max Lekë</span>
+        <div class="range-slider">
+          <input type="range" id="min-price" min="0" max="10000" value="0" step="100" class="filter">
+          <input type="range" id="max-price" min="0" max="10000" value="10000" step="100" class="filter">
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br><br><br>
+
+      <div class="quiz-links">
+    <h4>    Zbulo Dhuratën 🎁</h4>
+    <button onclick="location.href='quiz1.html'">Quiz 1: Personaliteti i mikut</button>
+    <button onclick="location.href='quiz2.html'">Quiz 2: Hobi & Stili</button>
+    <button onclick="location.href='quiz3.html'">Quiz 3: Çfarë i pëlqen?</button>
+    <button onclick="location.href='quiz4.html'">Quiz 4: Festa ideale</button>
+    <button id="openModalBtn">Personalizo Gift Box-in</button>
+
+<div id="giftBoxModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-content">
+    <span class="close" aria-label="Mbyll modalin">&times;</span>
+    <form id="giftBoxForm">
+      <h2 id="modalTitle">Personalizo Gift Box-in</h2>
+
+      <p>Emri juaj:</p>
+      <input type="text" name="name" required autocomplete="name" />
+
+      <p>Zgjidh produktet që dëshiron të përfshihen:</p>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="products[]" value="Qirinj aromatik" /> Qirinj aromatik</label>
+        <label><input type="checkbox" name="products[]" value="Sapune artizanale" /> Sapune artizanale</label>
+        <label><input type="checkbox" name="products[]" value="Filxhan i personalizuar" /> Filxhan i personalizuar</label>
+        <label><input type="checkbox" name="products[]" value="Çokollatë artizanale" /> Çokollatë artizanale</label>
+        <label><input type="checkbox" name="products[]" value="Çaj i lirshëm" /> Çaj i lirshëm</label>
+        <label><input type="checkbox" name="products[]" value="Byzylyk artizanal" /> Byzylyk artizanal</label>
+        <label><input type="checkbox" name="products[]" value="Mbajtëse çelësash" /> Mbajtëse çelësash</label>
+        <label><input type="checkbox" name="products[]" value="Shenjues librash" /> Shenjues librash</label>
+        <label><input type="checkbox" name="products[]" value="Bimë dekorative" /> Bimë dekorative</label>
+        <label><input type="checkbox" name="products[]" value="Vaj esencial" /> Vaj esencial</label>
+        <label><input type="checkbox" id="customCheckbox" value="custom" /> Tjetër (shkruaje më poshtë)</label>
+      </div>
+
+      <input
+        type="text"
+        id="customProduct"
+        name="customProduct"
+        placeholder="Shkruaj produktin tjetër..."
+        style="display: none; margin-top: 10px"
+      />
+
+      <p>Buxheti i preferuar (Lekë): * <span id="shippingCost" style="display:none;">Posta: 200 Lekë* </span></p>
+      <input type="number" name="budget" id="budgetInput" min="500" required />
+      <div class="note">* Nëse çmimi është më pak se 500 Lekë, porosia nuk pranohet. Faleminderit për mirëkuptimin!*</div>
+
+      <p>Zgjidh stilin e ambalazhit:</p>
+      <select name="style" required>
+        <option value="">-- Zgjidh --</option>
+        <option value="minimalist">Minimalist</option>
+        <option value="festive">Festiv</option>
+        <option value="elegant">Elegant</option>
+        <option value="romantic">Romantik</option>
+        <option value="kid">Fëminor</option>
+
+      </select>
+
+      <p>Mesazh personal për në kuti/ Ndonjë kërkesë të veçantë për ne:</p>
+      <textarea name="message" rows="5" placeholder="Shkruaj urimin/ kërkesën këtu..."></textarea>
+
+      <p>Data e dorëzimit: *</p>
+      <input type="date" name="delivery" id="deliveryDate" required />
+      <div class="note">* Porosia do të jetë gati në 10 ditë.</div>
+
+      <p>Zgjidh mënyrën e kontaktit:</p>
+      <select id="contactMethod" required>
+        <option value="">-- Zgjidh --</option>
+        <option value="email">Email</option>
+        <option value="phone">Numër telefoni</option>
+      </select>
+
+      <div id="emailField" style="display: none;">
+        <p>Emaili:</p>
+        <input type="email" name="email" />
+      </div>
+
+      <div id="phoneField" style="display: none;">
+        <p>Numri i telefonit:</p>
+        <input type="tel" name="phone" />
+      </div>
+
+      <button type="submit">Dërgo Porosinë</button>
+    </form>
+  </div>
+</div>
+
+<div id="confirmPopup" role="alertdialog" aria-modal="true" aria-labelledby="confirmTitle" aria-describedby="confirmDesc">
+  <div class="popup-content">
+    <span class="closePopup" aria-label="Mbyll mesazhin">&times;</span>
+    <p id="confirmTitle">Porosia u dërgua me sukses!</p>
+    <button id="confirmOkBtn">OK</button>
+  </div>
+</div>
+
+
+  </div>
+</div>
+</section>
+    <!-- Product Grid -->
+    <section class="shop-main">
+      <!-- <h2 class="shop-title">Handmade</h2> -->
+      <div class="shop-grid" id="product-grid">
+                <div class="product-card" data-category="handmade" data-color="neutral" data-price="48">
+          <img src="handmade1.jpg" alt="Felt Flower Wreath" class="product-thumbnail">
+          <div class="product-meta">
+            <p class="product-category">Handmade</p>
+            <h3 class="product-title">Qirinj Aromatik Artizanal</h3>
+            <label> Sasia: 
+            <input type="number" class="product-quantity" min="1" value="1" style="width: 60px; margin-bottom: 8px;">
+            </label>
+            <p class="product-price">900 Lekë</p>
+            <a href="produkt1_handmade.html">Shiko detajet</a>
+                <button class="add-to-cart-btn" onclick="addToCartFromCard(this)">Add to Cart</button>
+
+          </div>
+        </div>
+                <div class="product-card" data-category="handmade" data-color="neutral" data-price="48">
+          <img src="handmade2.jpg" alt="Felt Flower Wreath" class="product-thumbnail">
+          <div class="product-meta">
+            <p class="product-category">Handmade</p>
+            <h3 class="product-title">Pikturë në Kanavacë e Personalizuar</h3>
+            <input type="number" class="product-quantity" min="1" value="1" style="width: 60px; margin-bottom: 8px;">            
+            <p class="product-price">2500 Lekë</p>
+            <a href="produkt2_handmade.html">Shiko detajet</a>
+                <button class="add-to-cart-btn" onclick="addToCartFromCard(this)">Add to Cart</button>
+
+          </div>
+        </div>
+                <div class="product-card" data-category="handmade" data-color="neutral" data-price="48">
+          <img src="handmade3.jpg" alt="Felt Flower Wreath" class="product-thumbnail">
+          <div class="product-meta">
+            <p class="product-category">Handmade</p>
+            <h3 class="product-title">Lule Dekorative prej Letre</h3>
+            <input type="number" class="product-quantity" min="1" value="1" style="width: 60px; margin-bottom: 8px;">            
+            <p class="product-price">1000 Lekë</p>
+            <a href="produkt3_handmade.html">Shiko detajet</a>
+                <button class="add-to-cart-btn" onclick="addToCartFromCard(this)">Add to Cart</button>
+
+          </div>
+        </div>
+                <div class="product-card" data-category="handmade" data-color="neutral" data-price="48">
+          <img src="keychain.jpg" alt="Felt Flower Wreath" class="product-thumbnail">
+          <div class="product-meta">
+            <p class="product-category">Handmade</p>
+            <h3 class="product-title">Varëse Çelësash e Qepur me Dorë</h3>
+            <input type="number" class="product-quantity" min="1" value="1" style="width: 60px; margin-bottom: 8px;">            
+            <p class="product-price">800 Lekë</p>
+            <a href="produkt5_handmade.html">Shiko detajet</a>
+            <button class="add-to-cart-btn" onclick="addToCartFromCard(this)">Add to Cart</button>
+          </div>
+        </div>
+                <div class="product-card" data-category="handmade" data-color="neutral" data-price="48">
+          <img src="handmade4.jpg" alt="Felt Flower Wreath" class="product-thumbnail">
+          <div class="product-meta">
+            <p class="product-category">Handmade</p>
+            <h3 class="product-title">Kornizë me Qëndisje Artizanale</h3>
+            <input type="number" class="product-quantity" min="1" value="1" style="width: 60px; margin-bottom: 8px;">            
+            <p class="product-price">2500 Lekë</p>
+            <a href="produkt4_handmade.html">Shiko detajet</a>
+                <button class="add-to-cart-btn" onclick="addToCartFromCard(this)">Add to Cart</button>
+
+          </div>
+        </div>
+                <div class="product-card" data-category="handmade" data-color="neutral" data-price="48">
+          <img src="handmade6.jpg" alt="Pjatë dekorative e pikturuar me dorë" class="product-thumbnail">
+          <div class="product-meta">
+            <p class="product-category">Handmade</p>
+            <h3 class="product-title">Pjatë Dekorative prej Balte</h3>
+            <input type="number" class="product-quantity" min="1" value="1" style="width: 60px; margin-bottom: 8px;">            
+            <p class="product-price">2500 Lekë</p>
+            <a href="produkt6_handmade.html">Shiko detajet</a>
+            <button class="add-to-cart-btn" onclick="addToCartFromCard(this)">Add to Cart</button>
+          </div>
+
+        </div>
+                <div class="product-card" data-category="mjete" data-color="neutral" data-price="48">
+          <img src="aksesor1.jpg" alt="Pjatë dekorative e pikturuar me dorë" class="product-thumbnail">
+          <div class="product-meta">
+            <p class="product-category"> Mjete & Aksesore</p>
+            <h3 class="product-title">Furçë Bojërash Profesionale</h3>
+            <input type="number" class="product-quantity" min="1" value="1" style="width: 60px; margin-bottom: 8px;">            
+            <p class="product-price">500 Lekë</p>
+            <a href="aksesor1.html">Shiko detajet</a>
+            <button class="add-to-cart-btn" onclick="addToCartFromCard(this)">Add to Cart</button>
+          </div>
+
+        </div>
+                <div class="product-card" data-category="mjete" data-color="neutral" data-price="48">
+          <img src="aksesor2.jpg" alt="Pjatë dekorative e pikturuar me dorë" class="product-thumbnail">
+          <div class="product-meta">
+            <p class="product-category"> Mjete & Aksesore</p>
+            <h3 class="product-title">Paletë Ngjyrash Druri</h3>
+            <input type="number" class="product-quantity" min="1" value="1" style="width: 60px; margin-bottom: 8px;">            
+            <p class="product-price">800 Lekë</p>
+            <a href="aksesor2.html">Shiko detajet</a>
+            <button class="add-to-cart-btn" onclick="addToCartFromCard(this)">Add to Cart</button>
+          </div>
+
+        </div>
+                <div class="product-card" data-category="mjete" data-color="neutral" data-price="48">
+          <img src="aksesor3.jpg" alt="Pjatë dekorative e pikturuar me dorë" class="product-thumbnail">
+          <div class="product-meta">
+            <p class="product-category"> Mjete & Aksesore</p>
+            <h3 class="product-title">Furçë për Pastrimin e Brumit</h3>
+            <input type="number" class="product-quantity" min="1" value="1" style="width: 60px; margin-bottom: 8px;">            
+            <p class="product-price">900 Lekë</p>
+            <a href="aksesor3.html">Shiko detajet</a>
+            <button class="add-to-cart-btn" onclick="addToCartFromCard(this)">Add to Cart</button>
+          </div>
+
+        </div>
+                <div class="product-card" data-category="mjete" data-color="neutral" data-price="48">
+          <img src="aksesor4.jpg" alt="Pjatë dekorative e pikturuar me dorë" class="product-thumbnail">
+          <div class="product-meta">
+            <p class="product-category"> Mjete & Aksesore</p>
+            <h3 class="product-title">Shirit Ngjitës për Paketim</h3>
+            <input type="number" class="product-quantity" min="1" value="1" style="width: 60px; margin-bottom: 8px;">            
+            <p class="product-price">2500 Lekë</p>
+            <a href="aksesor4.html">Shiko detajet</a>
+            <button class="add-to-cart-btn" onclick="addToCartFromCard(this)">Add to Cart</button>
+          </div>
+
+        </div>
+                <div class="product-card" data-category="mjete" data-color="neutral" data-price="48">
+          <img src="aksesor5.jpg" alt="Pjatë dekorative e pikturuar me dorë" class="product-thumbnail">
+          <div class="product-meta">
+            <p class="product-category"> Mjete & Aksesore</p>
+            <h3 class="product-title">Matës për Punime Precize</h3>
+            <input type="number" class="product-quantity" min="1" value="1" style="width: 60px; margin-bottom: 8px;">            
+            <p class="product-price">200 Lekë</p>
+            <a href="aksesor5.html">Shiko detajet</a>
+            <button class="add-to-cart-btn" onclick="addToCartFromCard(this)">Add to Cart</button>
+          </div>
+
+        </div>
+                <div class="product-card" data-category="mjete" data-color="neutral" data-price="48">
+          <img src="aksesor6.jpg" alt="Pjatë dekorative e pikturuar me dorë" class="product-thumbnail">
+          <div class="product-meta">
+            <p class="product-category"> Mjete & Aksesore</p>
+            <h3 class="product-title">Aksesorë për Stampim</h3>
+            <input type="number" class="product-quantity" min="1" value="1" style="width: 60px; margin-bottom: 8px;">            
+            <p class="product-price">400 Lekë</p>
+            <a href="aksesor6.html">Shiko detajet</a>
+            <button class="add-to-cart-btn" onclick="addToCartFromCard(this)">Add to Cart</button>
+          </div>
+
+        </div>
+                <div class="product-card" data-category="giftbox" data-color="neutral" data-price="48">
+          <img src="giftbox1.jpeg" alt="Pjatë dekorative e pikturuar me dorë" class="product-thumbnail">
+          <div class="product-meta">
+            <p class="product-category"> Pako Dhuratë</p>
+            <h3 class="product-title">Kutia e Relaksit</h3>
+            <input type="number" class="product-quantity" min="1" value="1" style="width: 60px; margin-bottom: 8px;">            
+            <p class="product-price">3200 Lekë</p>
+            <a href="giftbox1.html">Shiko detajet</a>
+            <button class="add-to-cart-btn" onclick="addToCartFromCard(this)">Add to Cart</button>
+          </div>
+
+        </div>
+                <div class="product-card" data-category="giftbox" data-color="neutral" data-price="48">
+          <img src="giftbox2.jpeg" alt="Pjatë dekorative e pikturuar me dorë" class="product-thumbnail">
+          <div class="product-meta">
+            <p class="product-category"> Pako Dhuratë</p>
+            <h3 class="product-title">Kutia e Krijimtarisë</h3>
+            <input type="number" class="product-quantity" min="1" value="1" style="width: 60px; margin-bottom: 8px;">            
+            <p class="product-price">3800 Lekë</p>
+            <a href="giftbox2.html">Shiko detajet</a>
+            <button class="add-to-cart-btn" onclick="addToCartFromCard(this)">Add to Cart</button>
+          </div>
+
+        </div>
+                <div class="product-card" data-category="giftbox" data-color="neutral" data-price="48">
+          <img src="giftbox3.jpeg" alt="Pjatë dekorative e pikturuar me dorë" class="product-thumbnail">
+          <div class="product-meta">
+            <p class="product-category"> Pako Dhuratë</p>
+            <h3 class="product-title">Kuti Relaksi & Aromaterapie</h3>
+            <input type="number" class="product-quantity" min="1" value="1" style="width: 60px; margin-bottom: 8px;">            
+            <p class="product-price">4200 Lekë</p>
+            <a href="giftbox3.html">Shiko detajet</a>
+            <button class="add-to-cart-btn" onclick="addToCartFromCard(this)">Add to Cart</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+<footer>
+  <div class="footer-top">
+    <!-- Logo + Slogan -->
+    <div class="footer-about">
+      <img src="slogan1.png" alt="CraftVerse Logo" width="300px">
+    </div>
+
+    <!-- Lidhje të shpejta -->
+    <div class="footer-grid">
+      <div>
+        <h4>CraftVerse</h4>
+        <ul>
+          <li><a href="index.html">Kreu</a></li>
+          <li><a href="craftstudio.htmk">CarftStudio</a></li>
+          <li><a href="market.html">CraftMarket</a></li>
+          <li><a href="blog.html">CraftCommunity</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Mbështetje</h4>
+        <ul>
+          <li><a href="contact.html">Kontakt</a></li>
+          <li><a href="faq1.html">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Kompania</h4>
+        <ul>
+          <li><a href="#">Rreth Nesh</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Na gjej lehtësisht</h4>
+        <ul>
+          <li><i class="fas fa-phone"></i> +355 60 000 0000</li>
+          <li><i class="fas fa-envelope"></i> info@craftverse.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Tiranë, Shqipëri</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pjesa fundore e faqes -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 CraftVerse</p>
+    <div>
+      <button type="button" class="terms-btn btn btn-link" data-bs-toggle="modal" data-bs-target="#termsModal">Termat</button>
+      <span>|</span>
+      <button type="button" class="terms-btn btn btn-link" data-bs-toggle="modal" data-bs-target="#privacyModal">Privatësia</button>
+    </div>
+  </div>
+
+<!-- Modal për Termat dhe Kushtet -->
+<div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="termsTitle">Termat dhe Kushtet e CraftVerse</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Mbyll"></button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Mirësevini në <strong>CraftVerse</strong>! Duke përdorur faqen tonë, ju pranoni të respektoni termat dhe kushtet e mëposhtme.
+        </p>
+
+        <h5>1. Përgjithësime</h5>
+        <p>
+          CraftVerse është një platformë online me tre seksione kryesore:
+          <strong>Market</strong>, <strong>Blog</strong> dhe <strong>Tutorial</strong>.
+        </p>
+
+        <h5>2. Përdorimi i faqes</h5>
+        <p>
+          Ju pranoni të mos përdorni CraftVerse për qëllime të paligjshme ose për shkelje të të drejtave të autorit.
+        </p>
+
+        <h5>3. Market Page</h5>
+        <p>
+          Produktet janë artizanale. Çmimet dhe disponueshmëria mund të ndryshojnë pa paralajmërim.
+        </p>
+
+        <h5>4. Blog & Tutorial</h5>
+        <p>
+          Artikujt dhe videot janë për qëllime informuese dhe edukative. Ndiqni udhëzimet e sigurisë kur kryeni DIY projekte.
+        </p>
+
+        <h5>5. Privatësia</h5>
+        <p>
+          Të dhënat tuaja personale ruhen dhe përdoren vetëm për qëllime të komunikimit dhe porosive.
+        </p>
+
+        <h5>6. Ndryshime</h5>
+        <p>
+          CraftVerse mund të ndryshojë këto terma në çdo kohë dhe do t’i publikojë në këtë faqe.
+        </p>
+
+        <p><strong>Duke përdorur CraftVerse, ju pranoni këto terma.</strong></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">E kuptova</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal për Privatësinë -->
+<div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="privacyTitle">Politika e Privatësisë</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Mbyll"></button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Privatësia juaj është me rëndësi për ne. Kjo politikë përshkruan se si mbledhim, përdorim dhe mbrojmë të dhënat tuaja.
+        </p>
+
+        <h5>1. Të dhënat që mbledhim</h5>
+        <p>
+          Mbledhim të dhëna kur regjistroheni, bëni porosi ose na kontaktoni. Këto përfshijnë emrin, emailin, dhe të dhëna të kontaktit.
+        </p>
+
+        <h5>2. Si i përdorim të dhënat</h5>
+        <p>
+          Të dhënat përdoren për përpunim porosish, ofrim shërbimesh dhe komunikim me ju.
+        </p>
+
+        <h5>3. Ruajtja dhe siguria</h5>
+        <p>
+          Të dhënat ruhen në mënyrë të sigurt dhe nuk ndahen me palë të treta pa pëlqimin tuaj.
+        </p>
+
+        <h5>4. Cookies</h5>
+        <p>
+          Ne përdorim cookies për të përmirësuar përvojën tuaj dhe për analizim të faqes.
+        </p>
+
+        <p><strong>Duke përdorur faqen tonë, ju pranoni politikën tonë të privatësisë.</strong></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">E kuptova</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="market.js"></script>
+</body>

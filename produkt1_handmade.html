@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Qirinj Aromatik Artizanal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="indexStyle.css">
+  <link rel="stylesheet" href="product.css">
+</head>
+<body>
+  <div id="custom-alert" class="custom-alert hidden"></div>
+   <header>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container d-flex justify-content-center">
+        <a class="navbar-brand" href="index.html">
+          <img src="logoo2.png" alt="CraftVerseLogo" class="img-fluid" width="350" height="150">
+        </a>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav justify-content-center w-100">
+            <li class="nav-item"><a class="nav-link" href="index.html">KREU</a></li>
+            <li class="nav-item"><a class="nav-link" href="aboutUs.html">RRETH NESH</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">CraftStudio</a>
+              <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="partizanale.html">Punime Artizanale</a></li>
+                            <li><a class="dropdown-item" href="digjitale.html">Ilustrime Digjitale</a></li>
+                            <li><a class="dropdown-item" href="qepjendje.html">Qepje & Endje</a></li>
+                            <li><a class="dropdown-item" href="ricikluara.html">Punime të Ricikluara</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="market.html">CraftMarket</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">CraftCommunity</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Kontakt</a></li>
+            <li class="nav-item"><a class="nav-link" href="signup.html"><button class="btn-filled">SignUP</button></a></li>
+          </ul>
+                  </div>
+                <a class="nav-link" href="cart.html">
+            <i class="bi bi-bag-heart-fill"></i> <span id="cart-count">0</span>
+        </a>
+      </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+<main class="product-detail-container">
+  <h1>Qirinj Aromatik Artizanal</h1>
+  <p class="category">Kategori: Handmade</p>
+
+  <div class="product-gallery">
+    <img id="product-image" src="handmade1.jpg" alt="Qiri aromatik i bardhë në gotë" />
+  </div>
+
+  <div class="product-info">
+    <p>Këta qirinj janë bërë me dyllë natyral soje dhe vajra esencialë me aromë relaksuese si livando, vanilje dhe kanellë. Përveç funksionit aromaterapeutik, janë dekorativë dhe një dhuratë perfekte për raste të veçanta.</p>
+    
+    <ul>
+      <li>Dyllë soje natyral, pa toksina</li>
+      <li>Kapak bambuje për ruajtjen e aromës</li>
+      <li>Koha e djegies: rreth 40 orë</li>
+    </ul>
+
+    <div class="price" id="product-price">900 Lekë</div>
+
+    <div class="quantity-container">
+      <label for="quantity">Sasia:</label>
+      <input type="number" id="quantity" class="quantity-input" min="1" value="1">
+    </div>
+
+    <button class="order-button" onclick="addToCartFromProductPage()">Shto në shportë</button>
+  </div>
+  
+  <div class="post-nav">
+    <a href="market.html">← Kthehu</a>
+  </div>
+</main>
+<footer>
+  <div class="footer-top">
+    <!-- Logo + Slogan -->
+    <div class="footer-about">
+      <img src="slogan1.png" alt="CraftVerse Logo" width="300px">
+    </div>
+
+    <!-- Lidhje të shpejta -->
+    <div class="footer-grid">
+      <div>
+        <h4>CraftVerse</h4>
+        <ul>
+          <li><a href="index.html">Kreu</a></li>
+          <li><a href="craftstudio.htmk">CarftStudio</a></li>
+          <li><a href="market.html">CraftMarket</a></li>
+          <li><a href="blog.html">CraftCommunity</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Mbështetje</h4>
+        <ul>
+          <li><a href="contact.html">Kontakt</a></li>
+          <li><a href="faq1.html">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Kompania</h4>
+        <ul>
+          <li><a href="#">Rreth Nesh</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Na gjej lehtësisht</h4>
+        <ul>
+          <li><i class="fas fa-phone"></i> +355 60 000 0000</li>
+          <li><i class="fas fa-envelope"></i> info@craftverse.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Tiranë, Shqipëri</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pjesa fundore e faqes -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 CraftVerse</p>
+    <div>
+      <button type="button" class="terms-btn btn btn-link" data-bs-toggle="modal" data-bs-target="#termsModal">Termat</button>
+      <span>|</span>
+      <button type="button" class="terms-btn btn btn-link" data-bs-toggle="modal" data-bs-target="#privacyModal">Privatësia</button>
+    </div>
+  </div>
+
+<!-- Modal për Termat dhe Kushtet -->
+<div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="termsTitle">Termat dhe Kushtet e CraftVerse</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Mbyll"></button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Mirësevini në <strong>CraftVerse</strong>! Duke përdorur faqen tonë, ju pranoni të respektoni termat dhe kushtet e mëposhtme.
+        </p>
+
+        <h5>1. Përgjithësime</h5>
+        <p>
+          CraftVerse është një platformë online me tre seksione kryesore:
+          <strong>Market</strong>, <strong>Blog</strong> dhe <strong>Tutorial</strong>.
+        </p>
+
+        <h5>2. Përdorimi i faqes</h5>
+        <p>
+          Ju pranoni të mos përdorni CraftVerse për qëllime të paligjshme ose për shkelje të të drejtave të autorit.
+        </p>
+
+        <h5>3. Market Page</h5>
+        <p>
+          Produktet janë artizanale. Çmimet dhe disponueshmëria mund të ndryshojnë pa paralajmërim.
+        </p>
+
+        <h5>4. Blog & Tutorial</h5>
+        <p>
+          Artikujt dhe videot janë për qëllime informuese dhe edukative. Ndiqni udhëzimet e sigurisë kur kryeni DIY projekte.
+        </p>
+
+        <h5>5. Privatësia</h5>
+        <p>
+          Të dhënat tuaja personale ruhen dhe përdoren vetëm për qëllime të komunikimit dhe porosive.
+        </p>
+
+        <h5>6. Ndryshime</h5>
+        <p>
+          CraftVerse mund të ndryshojë këto terma në çdo kohë dhe do t’i publikojë në këtë faqe.
+        </p>
+
+        <p><strong>Duke përdorur CraftVerse, ju pranoni këto terma.</strong></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">E kuptova</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal për Privatësinë -->
+<div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="privacyTitle">Politika e Privatësisë</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Mbyll"></button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Privatësia juaj është me rëndësi për ne. Kjo politikë përshkruan se si mbledhim, përdorim dhe mbrojmë të dhënat tuaja.
+        </p>
+
+        <h5>1. Të dhënat që mbledhim</h5>
+        <p>
+          Mbledhim të dhëna kur regjistroheni, bëni porosi ose na kontaktoni. Këto përfshijnë emrin, emailin, dhe të dhëna të kontaktit.
+        </p>
+
+        <h5>2. Si i përdorim të dhënat</h5>
+        <p>
+          Të dhënat përdoren për përpunim porosish, ofrim shërbimesh dhe komunikim me ju.
+        </p>
+
+        <h5>3. Ruajtja dhe siguria</h5>
+        <p>
+          Të dhënat ruhen në mënyrë të sigurt dhe nuk ndahen me palë të treta pa pëlqimin tuaj.
+        </p>
+
+        <h5>4. Cookies</h5>
+        <p>
+          Ne përdorim cookies për të përmirësuar përvojën tuaj dhe për analizim të faqes.
+        </p>
+
+        <p><strong>Duke përdorur faqen tonë, ju pranoni politikën tonë të privatësisë.</strong></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">E kuptova</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="product.js"></script>
+</body>
+</html>
